@@ -1,38 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
+  display: flex;
+  background-color: black;
+  padding: 2px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  color: white;
+  /* overflow-x: hidden; */
+}
+.sideMenu {
+  width: 260px;
+  padding: 10px;
+  background-color: #202123;
+}
+.side-menu-btn {
+  padding: 12px;
+  border: 1px solid white;
+  border-radius: 5px;
+  text-align: left;
+  transition: ease 0.25s all;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.side-menu-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.side-menu-btn > span {
+  padding-left: 6px;
+  padding-right: 12px;
+}
+.chatBox {
+  flex: 1;
+  background-color: #343541;
+  position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* chat-log area */
+.chat-log {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 10px;
+}
+.chat-message {
+  padding: 12px;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 100%;
+  padding: 0px 24px;
+}
+.chat-message.chatgpt {
+  background-color: #444654;
+}
+.chat-message-center {
+  display: flex;
+  max-width: 640px;
+  margin: auto;
+}
+.avatar {
+  background: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.avatar.chatgpt {
+  background: #0da37f;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.avatar.chatgpt img {
+  width: 40px;
+}
+.message {
+  padding: 0px 40px;
+}
+/* chat area */
+
+.chat-input-holder {
+  padding: 12px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.chat-input-textArr {
+  background-color: #40414f;
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  font-size: 1.25em;
+  border: none;
+  margin: 12px;
+  outline: none;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.25);
 }
